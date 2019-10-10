@@ -2,7 +2,7 @@ import React from "react";
 
 const Content = ({ children }) => (
   <section className="section">
-    <div class="container">
+    <div className="container">
       {children}
     </div>
   </section>
