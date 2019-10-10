@@ -17,21 +17,29 @@ class AllProducts extends Component {
       .then(data => {
         const assets = data.includes.Asset;
         const filteredData = data.items.map(item => {
-            let imageAlt = "A bouquet of flowers"
-            let imageUrl =
-            "//images.ctfassets.net/28s4t9brspwb/1bL78zLTxkA1yKyqvI907T/9d130c3bf51e7113e906c238cbfa1e6f/Screenshot_2019-10-10_at_11.57.11.png"; // Placeholder url
-          const imageId = item.fields.image.sys.id // Find item fields id
+          let imageUrl = "";
+          let imageAlt = "";
+          let imageId = "";
+          // Find item fields id if it exists
+          if (item.fields.image) {
+            imageId = item.fields.image.sys.id;
+          }
+          // Return the asset object with an asset.id matching the fields.id
           const imageData = assets.find(asset => {
-            return asset.sys.id === imageId; // Return assets obj with asset.id matching fields.id
+            return asset.sys.id === imageId;
           });
+          // If there is a match, use the imageData to set imageUrl & imageAlt
           if (imageData) {
-            imageUrl = imageData.fields.file.url; // If match, url set imageUrl from matching object
+            imageUrl = imageData.fields.file.url;
             imageAlt = imageData.fields.description;
           }
-          item.fields.image = imageUrl; // Set fields image with useable image url
+          // Declare custom key/values for the item object
+          item.fields.image = imageUrl;
           item.fields.alt = imageAlt;
-          return item.fields; // Return fields object
+          
+          return item.fields;
         });
+        // Store the custom item.fields object in the state
         this.setState({
           productData: filteredData
         });
