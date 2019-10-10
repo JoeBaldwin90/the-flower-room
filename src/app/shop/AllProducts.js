@@ -17,7 +17,8 @@ class AllProducts extends Component {
       .then(data => {
         const assets = data.includes.Asset;
         const filteredData = data.items.map(item => {
-          let imageUrl =
+            let imageAlt = "A bouquet of flowers"
+            let imageUrl =
             "//images.ctfassets.net/28s4t9brspwb/1bL78zLTxkA1yKyqvI907T/9d130c3bf51e7113e906c238cbfa1e6f/Screenshot_2019-10-10_at_11.57.11.png"; // Placeholder url
           const imageId = item.fields.image.sys.id // Find item fields id
           const imageData = assets.find(asset => {
@@ -25,8 +26,10 @@ class AllProducts extends Component {
           });
           if (imageData) {
             imageUrl = imageData.fields.file.url; // If match, url set imageUrl from matching object
+            imageAlt = imageData.fields.description;
           }
           item.fields.image = imageUrl; // Set fields image with useable image url
+          item.fields.alt = imageAlt;
           return item.fields; // Return fields object
         });
         this.setState({
