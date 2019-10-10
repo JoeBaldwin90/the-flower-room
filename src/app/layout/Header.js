@@ -81,7 +81,7 @@ class Header extends React.Component {
 
             <NavLink
               className="navbar-item"
-              to="/about"
+              to="/info"
               activeClassName="is-active"
             >
               <span
@@ -90,7 +90,7 @@ class Header extends React.Component {
               >
                 <i className="fas fa-code"></i>
               </span>
-              About
+              Info
             </NavLink>
           </div>
         </div>
