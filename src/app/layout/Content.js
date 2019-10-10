@@ -1,6 +1,11 @@
-import styled from "styled-components";
+import React from "react";
 
-const Content = styled.div`
-  flex: 1;
-`;
+const Content = ({ children }) => (
+  <section className="section">
+    <div class="container">
+      {children}
+    </div>
+  </section>
+);
+
 export default Content;
