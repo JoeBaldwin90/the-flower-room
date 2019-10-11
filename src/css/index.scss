@@ -25,3 +25,24 @@ code {
 .logo {
   font-family: "Julius Sans One";
 }
+
+.card {
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+#delivery-info {
+  .info-block {
+    transition: all 0.4s ease;
+  }
+  &:hover .info-block {
+    transform: translateX(10px);
+  }
+}
+
