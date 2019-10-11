@@ -29,18 +29,18 @@ const DeliveryInfo = () => (
     </section>
 
     <div>
-      <div class="notification">
+      <div className="notification">
         <div className="container">
-          <div class="tile is-ancestor">
-            <div class="tile is-4 is-vertical is-parent">
-              <div class="tile is-child box">
+          <div className="tile is-ancestor">
+            <div className="tile is-4 is-vertical is-parent">
+              <div className="tile is-child box">
                 <h1 className="title">Delivery</h1>
                 <p className="subtitle">
                   We can deliver on the same day or within 3 hours for local
                   clients, but we also ship worldwide.
                 </p>
               </div>
-              <div class="tile is-child box">
+              <div className="tile is-child box">
                 <h1 className="title">Opening Hours</h1>
                 <p className="subtitle">
                   Mon- Fri: 09:00 - 17:00 <br />
@@ -48,8 +48,8 @@ const DeliveryInfo = () => (
                 </p>
               </div>
             </div>
-            <div class="tile is-parent">
-              <div class="tile is-child box">
+            <div className="tile is-parent">
+              <div className="tile is-child box">
                 <h1 className="title">Where to find us</h1>
                 <p className="subtitle">
                   <b>44 White Hart Ln</b> <br />
@@ -63,6 +63,7 @@ const DeliveryInfo = () => (
                   <a
                     href="https://goo.gl/maps/7eKvunm47VysXURw7"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="button is-info is-outlined"
                   >
                     <strong>Find us on Google Maps</strong>
