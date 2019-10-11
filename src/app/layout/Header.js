@@ -37,7 +37,7 @@ class Header extends React.Component {
           <div
             className={
               this.state.isActive ? "navbar-menu is-active" : "navbar-menu"
-            }}
+            }
           >
             <div className="navbar-end">
               <NavLink
