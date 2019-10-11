@@ -21,77 +21,60 @@ class Header extends React.Component {
           borderBottom: "solid 1px #dddddd"
         }}
       >
-        <div className="navbar-brand">
-          <a className="navbar-item">
-            <img
-              style={{
-                borderTopLeftRadius: "50%",
-                borderTopRightRadius: "50%",
-                borderBottomLeftRadius: "50%",
-                borderBottomRightRadius: "50%",
-                marginRight: 15
-              }}
-              src="https://images.vexels.com/media/users/3/156051/isolated/preview/72094c4492bc9c334266dc3049c15252-flat-flower-icon-flower-by-vexels.png"
-              width="30px"
-              alt=""
-            />
-            <span>The Flower Room</span>
-          </a>
-          <button className="button navbar-burger" onClick={this.toggleNav}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div
-          className={
-            this.state.isActive ? "navbar-menu is-active" : "navbar-menu"
-          }
-        >
-          <div className="navbar-start">
+        <div className="container">
+          <div className="navbar-brand">
             <NavLink className="navbar-item" to="/" activeClassName="is-active">
-              <img
-                style={{
-                  borderTopLeftRadius: "50%",
-                  borderTopRightRadius: "50%",
-                  borderBottomLeftRadius: "50%",
-                  borderBottomRightRadius: "50%",
-                  marginRight: 15
-                }}
-                src="https://image.flaticon.com/icons/png/512/25/25694.png"
-                width="30px"
-                alt=""
-              />
-              <span>Home</span>
+              <span className="is-size-5">The Flower Room</span>
             </NavLink>
 
-            <NavLink
-              className="navbar-item"
-              to="/shop"
-              activeClassName="is-active"
-            >
-              <span
-                className="icon has-text-primary"
-                style={{ marginRight: 5 }}
-              >
-                <i className="fas fa-code"></i>
-              </span>
-              Shop
-            </NavLink>
+            <button className="button navbar-burger" onClick={this.toggleNav}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
 
-            <NavLink
-              className="navbar-item"
-              to="/info"
-              activeClassName="is-active"
-            >
-              <span
-                className="icon has-text-primary"
-                style={{ marginRight: 5 }}
+          <div
+            className={
+              this.state.isActive ? "navbar-menu is-active" : "navbar-menu"
+            }
+          >
+            <div className="navbar-end">
+              <NavLink
+                className="navbar-item"
+                to="/shop"
+                activeClassName="is-active"
               >
-                <i className="fas fa-code"></i>
-              </span>
-              Info
-            </NavLink>
+                <span className="icon has-text-info" style={{ marginRight: 5 }}>
+                  <i className="fas fa-leaf"></i>
+                </span>
+                Shop
+              </NavLink>
+
+              <NavLink
+                className="navbar-item"
+                to="/info"
+                activeClassName="is-active"
+              >
+                <span className="icon has-text-info" style={{ marginRight: 5 }}>
+                  <i className="fas fa-info"></i>
+                </span>
+                Info
+              </NavLink>
+              <div className="navbar-item">
+                <a
+                  href="https://www.instagram.com/theflower.room/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button is-dark is-info"
+                >
+                  <span className="icon" style={{ marginRight: 5 }}>
+                    <i className="fab fa-instagram"></i>
+                  </span>
+                  Instagram
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
