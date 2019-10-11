@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import Product from "./Product";
 
 class AllProducts extends Component {
@@ -36,7 +37,7 @@ class AllProducts extends Component {
           // Declare custom key/values for the item object
           item.fields.image = imageUrl;
           item.fields.alt = imageAlt;
-          
+
           return item.fields;
         });
         // Store the custom item.fields object in the state
@@ -49,14 +50,39 @@ class AllProducts extends Component {
 
   renderItems = () => {
     return this.state.productData.map((product, index) => (
-      <div className="column is-4">
+      <div className="column is-one-third">
         <Product key={index} productData={product} />
       </div>
     ));
   };
 
   render() {
-    return <div class="columns">{this.renderItems()}</div>;
+    return (
+      <div>
+        <section class="section">
+          <div class="container">
+            <div class="columns is-multiline">{this.renderItems()}</div>
+          </div>
+        </section>
+        <section class="hero is-info is-bold">
+          <NavLink to="/info" id="delivery-info">
+            <div class="hero-body">
+              <div class="container info-block">
+                <h1 className="title">
+                  How to order
+                  <span className="icon subtitle" style={{ marginLeft: 20 }}>
+                    <i className="fas fa-info"></i>
+                  </span>
+                </h1>
+                <h2 className="subtitle">
+                  <strong>& Delivery info</strong>
+                </h2>
+              </div>
+            </div>
+          </NavLink>
+        </section>
+      </div>
+    );
   }
 }
 
