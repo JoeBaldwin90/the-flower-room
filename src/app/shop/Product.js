@@ -10,14 +10,9 @@ const Product = ({ key, productData }) => (
       </div>
       <div className="card-content">
         <div className="media">
-          <div className="media-left">
-            <figure className="image is-48x48">
-              <img src={productData.image} alt={productData.alt} />
-            </figure>
-          </div>
           <div className="media-content">
             <p className="title is-4">{productData.title}</p>
-            <p className="subtitle is-6">{productData.price}</p>
+            <p className="subtitle is-6 is-primary">£{productData.price}</p>
           </div>
         </div>
 
