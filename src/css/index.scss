@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a.link:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  padding-bottom: 3px;
+}

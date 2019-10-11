@@ -1,11 +1,5 @@
 import React from "react";
 
-const Content = ({ children }) => (
-  <section className="section">
-    <div className="container">
-      {children}
-    </div>
-  </section>
-);
+const Content = ({ children }) => <div>{children}</div>;
 
 export default Content;
