@@ -1,5 +1,6 @@
 @import "../node_modules/bulma/bulma.sass";
 @import "../node_modules/bulma-extensions/src/sass/index.sass";
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
 
 body {
   margin: 0;
@@ -15,8 +16,12 @@ code {
     monospace;
 }
 
-a.link:hover {
+.link:hover {
   text-decoration: none;
   border-bottom: 1px solid;
   padding-bottom: 3px;
+}
+
+.logo {
+  font-family: "Julius Sans One";
 }
